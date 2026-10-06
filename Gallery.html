@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .main{
+            width:450px;
+            height:600px;
+            background-color: red;
+            margin:30px auto;
+        }
+        h2{
+            background-color: rgb(2, 43, 53);
+            padding: 7%;
+            color: white;
+            text-align: center;
+        }
+        .gallery{
+            width:100%;
+            height:86%;
+            background-color: rgb(205, 247, 248);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            overflow-y:auto;
+            padding: 5px;
+
+        }
+        .img{
+            width:130px;
+            height: 130px;
+            border-radius: 5px;
+            opacity:0.8;
+            
+        }
+        .img:hover{
+            width:133px;
+            height:133px;
+            box-shadow: 0px 0px 10px 5px rgb(245, 55, 55);
+            opacity: 1;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <h2>Image Gallery</h2>
+        <div class = "gallery">
+            <img src="./monkey d luffy.jpg" alt="" class ="img">
+            <img src="./images.webp" alt="" class ="img">
+            <img src="./monkey d luffy.jpg" alt="" class ="img">
+            <img src="./images.webp" alt="" class ="img">
+            <img src="./monkey d luffy.jpg" alt="" class ="img">
+            <img src="./images.webp" alt="" class ="img">
+            <img src="./monkey d luffy.jpg" alt="" class ="img">
+            <img src="./images.webp" alt="" class ="img">
+            <img src="./monkey d luffy.jpg" alt="" class ="img">
+            
+        </div>
+    </div>
+</body>
+</html>

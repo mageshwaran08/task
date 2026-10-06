@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        nav{
+            width:100%;
+            height: 100px;
+            background-color:rgb(7, 3, 247);
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            position: relative;
+
+        }
+        .logo{ 
+            width:300px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-left: auto;
+            color:white;
+            
+        }
+        .ul{
+            display: flex;
+            align-items: center;
+            width:700px;
+            height: 100%;
+            gap: 30px;
+        }
+        .li{ 
+           margin-left:20px;
+           list-style: none;
+        }
+        .link{
+            text-decoration: none;
+            color: white; 
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        .link:hover{
+            opacity: 0.7;
+
+        }
+
+         main {
+            width: 100%;
+            height: calc(100vh - 100px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        main h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: blue;
+        }
+        main p {
+            color: #26364d;
+            font-size: 35px;
+            font-weight: bold;
+        }
+                 .logo{
+                    width:150px; 
+                    margin-left: 5px;
+                    justify-content: start;
+                 }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            NAVBAR
+        </div>
+        <ul class="ul" id = "ul">
+            <li class="li"><a href="" class="link">Home</a></li>
+            <li class="li"><a href="" class="link">About</a></li>
+            <li class="li"><a href="" class="link">Blog</a></li>
+            <li class="li"><a href="" class="link">Contact</a></li>
+            <li class="li"><a href="" class="link">signin</a></li>
+            <li class="li"><a href="" class="link">signup</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>
+            NAVIGATION BAR
+        </h1>
+        <P>
+            HTML ;CSS ONLY
+        </P>
+    </main>
+</body>
+</html>

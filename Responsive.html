@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #1a1616;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        header {
+            background-color: aqua;
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+        }
+        .main-content {
+            width: 1000px;
+            margin: 20px auto;
+            max-width: 100%;
+            display: flex;
+        }
+        .left-content {
+            width: 650px;
+            background-color: #c4aeae;
+            padding: 20px;
+        }
+        .left-sub-container {
+           display: flex;
+           gap: 10px;
+           margin-top: 20%;
+        }
+        .sub-box {
+            width: 280px;
+            height: 150px;
+            background-color: rgb(152, 54, 209);
+            margin: 10px;
+            padding: 20px;
+        }
+        .right-content {
+            width: 350px;
+            background-color: #ddd;
+            padding: 20px;
+        }
+        .right-sub-box {
+            width: 300px;
+            height: 320px;
+            background-color: rgb(238, 229, 144);
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            width: 100%;
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        @media (max-width: 990px){            
+            .main-content {
+                width: 100%;
+                display: block;
+                margin: 20px 0;
+            }
+            .left-content {
+                width: 100%;
+            }
+             .right-content {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .left-sub-container {
+                display: block;
+            }
+            .sub-box {
+                width: 100%;
+                height: 150px;
+                margin-bottom:15px;
+            }
+            .right-sub-box {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+          Navigation
+    </nav>
+    <header>
+        Header
+    </header>
+    <main class="main-content">
+        <section class="left-content">
+           <h3>Left Content</h3> 
+            <div class="left-sub-container">
+                <div class="sub-box">
+                    Sub Content 1
+                </div>
+                <div class="sub-box">
+                    Sub Content 2
+                </div>
+            </div>
+        </section>
+        <section class="right-content">
+            <h3>Right Content</h3>
+            <div class="right-sub-box">
+                Sub Content
+            </div>
+        </section>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On-Site Enquiries Form</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(160deg, #071b3d 0%, #0d3b5c 35%, #146b5a 70%, #1f8a4c 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px 25px 40px;
+    }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+    }
+
+    h1 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        letter-spacing: 0.3px;
+    }
+
+    label {
+        display: block;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    label .required {
+        color: #ff4d4d;
+        margin-left: 3px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 14px 18px;
+        border: none;
+        border-radius: 25px;
+        background-color: #2f8f83;
+        color: #ffffff;
+        font-size: 14px;
+        outline: none;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"]::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .field-note {
+        color: #ffffff;
+        font-size: 12px;
+        margin-bottom: 18px;
+        opacity: 0.9;
+    }
+
+    .field-group {
+        margin-bottom: 8px;
+    }
+
+    .field-group:first-of-type {
+        margin-bottom: 25px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 16px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #e0a815;
+        color: #16324a;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #c99510;
+    }
+</style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon-circle">👷</div>
+        <h1>On-Site Enquiries Form</h1>
+
+        <form>
+            <div class="field-group">
+                <label for="name">Name<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="field-group">
+                <label for="street-address">Where are you<span class="required">*</span></label>
+                <input type="text" id="street-address" name="street-address" required>
+                <div class="field-note">Street Address</div>
+            </div>
+
+            <div class="field-group">
+                <input type="text" id="address-line-2" name="address-line-2">
+                <div class="field-note">Address Line 2</div>
+            </div>
+
+            <div class="field-group">
+                <input type="text" id="city" name="city">
+                <div class="field-note">City</div>
+            </div>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>

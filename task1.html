@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Task1</title>
+    <style>
+        *{
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+        }
+        nav{
+            width:100%;
+            height:10vh;
+            background-color: aqua;
+            display: flex;
+        }
+        .edu-pro{
+             width:250px;
+             height:100%;
+             display: flex;
+             justify-content: center;
+             align-items: center; 
+        }
+        .edu-pro img{
+            width:50px;
+            height: 50px;
+            
+        }
+        .edu-pro span{
+            font-size: 30px;
+            font-weight: 600;
+            margin-left: 15px;
+            font-family: sans-serif;
+        }
+        .ul{
+            width:600px;
+            height: 100%;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .ul > li{
+            list-style-type: none;
+            padding: 15px 20px;
+        }
+        .link{
+            text-decoration: none;
+        }
+        .request-btn{
+            width: 300px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }
+        .request-btn > i{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            color: black;
+        }
+        .request-btn > button{
+            background-color: #0168f9;
+            font-size: 20px;
+            padding: 13px 25px;
+            border: none;
+            color: whitesmoke;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+        .menu-bar{
+            width: 50px;
+            height: 50px;
+            display: none;
+        }
+        body{
+             font-family: Arial, sans-serif;
+             background: #fff8fb;
+        }
+        .hero {
+             width: 100%;
+             max-width: 1200px;
+             margin: auto;
+             min-height: 550px;
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+              gap: 40px;
+             padding: 60px 50px;
+             background: #f7eff5;
+       }
+       .content {
+        width:55%;
+       }
+      .title {
+             color: #086ff7;
+             font-size: 15px;
+             font-weight: bold;
+             letter-spacing: 1px;
+             margin-bottom: 18px;
+     }
+     .content h1 {
+             font-size: 50px;
+             color: #111827;
+             margin-bottom: 20px;
+           }
+     .description {
+             max-width: 520px;
+             color: #555;
+             font-size: 18px;
+             line-height: 1.6;
+             margin-bottom: 30px;
+     }
+     .hero-buttons {
+             display: flex;
+             gap: 16px;
+     }
+     .btn {
+              display: inline-block;
+             padding: 14px 25px;
+             border-radius: 8px;
+             text-decoration: none;
+             font-size: 16px;
+             font-weight: bold;
+             transition: 0.3s;
+     }
+     .primary {
+        background: #087cff;
+        color: white;
+       }
+     .primary:hover {
+        background: #0565d6;
+       }
+     .secondary {
+         background: white;
+         color: #087cff;
+          border: 2px solid #047af8;
+      }
+      .secondary:hover {
+         background: #087cff;
+         color: white;
+        }
+     .hero-image {
+         width: 45%;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .hero-image img {
+         width: 100%;
+         max-width: 480px;
+         display: block;
+         border-radius: 15px;
+         object-fit: cover;
+       }
+        @media screen and (max-width: 833px) {
+            nav {
+                position: relative;
+            }
+            .menu-bar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-right: 20px;
+                align-self: center;
+                font-size: 28px;
+                cursor: pointer;
+            }
+            .request-btn {
+                display: none;
+            }
+            .ul {
+                display: none;
+                position: absolute;
+                top: 10vh;
+                left: 0;
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: rgb(0, 195, 255);
+                z-index: 100;
+            }
+            .ul.show {
+                display: flex;
+            }
+            .ul > li {
+                width: 100%;
+            }
+        }
+          @media screen and (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 45px 5%;
+            }
+            .content {
+                width: 100%;
+            }
+            .content h1 {
+                font-size: 36px;
+            }
+            .description {
+                font-size: 16px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .hero-image {
+                width: 100%;
+            }
+            .hero-image img {
+                max-width: 450px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="edu-pro">
+        <img src="data:image/webp;base64,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" alt="">
+        <span>EduPro</span>
+        </div>
+        <ul class="ul">
+            <li><a href="" class="link">Home</a></li>
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Cource</a></li>
+            <li><a href="" class="link">Blog</a></li>
+            <li><a href="" class="link">Contact</a></li>
+        </ul>
+          <div class="request-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <button>Get Started</button>
+          </div>  
+           <img id="menu" class="menu-bar" src="./menu bar.png" alt="Menu">
+    </nav>
+     <section class="hero">
+        <div class="content">
+            <p class="title">LEARN ANYTHING, ANYWHERE</p>
+            <h1>
+                Build Your Future<br>
+                With Better Learning
+            </h1>
+            <p class="description">
+                Join thousands of students and learn new skills
+                with our expert instructors.
+            </p>
+            <div class="hero-buttons">
+                <a href="" class="btn primary">
+                    Explore Courses
+                </a>
+                <a href="" class="btn secondary">
+                    Watch Video
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+
+            <img src="./Image 2026-09-26 at 7.51.47 AM.jpeg" alt="">
+        </div>
+    </section>
+    <script>
+    const menu = document.getElementById("menu");
+    const nav = document.querySelector(".ul");
+
+    menu.addEventListener("click", function () {
+        nav.classList.toggle("show");
+    });
+</script>
+</body>
+</html>

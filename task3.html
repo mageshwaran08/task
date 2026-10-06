@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 8px;
+            font-family: "Times New Roman", serif;
+        }
+        .page{
+            border: 2px solid#555;
+        }
+        header{
+            background-color:#3333e0;
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header h1{
+            margin: 0;
+            font-size: 2.rem;
+        }
+        main{
+            margin: 0 35px;
+            border-left: 1px solid #555;
+            border-right: 1px solid #555;
+            padding-bottom: 30px;
+        }
+        main p{
+            margin: 0;
+            padding: 30px 0 30px 0;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.5;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #555;
+        }
+        .table-title {
+            background-color: #707070;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 6px;
+            border-bottom: 1px solid #555;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,td{
+            border: 1px solid#555;
+            height: 60px;
+        }
+        th{
+            background-color: #aaa;
+        }
+         footer {
+            background-color: #7b9be0;
+            text-align: center;
+            padding: 22px 10px;
+            font-weight: bold;
+            border-top: 1px solid#555;
+        }
+        @media (max-width:600px) {
+           main { margin: 0 10px; overflow-x: auto; } 
+           th, td { padding: 4px; font-size: 0.85rem; }  
+        }
+
+    </style>
+</head>
+<body>
+     <div class="page">
+    <header>
+      <h1>Welcome to VTNF</h1>
+    </header>
+    <main>
+      <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+      </p>
+      <div class="table-title">Student Mark List</div>
+      <table>
+        <thead>
+          <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Tamil</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Social Science</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td><td>Jegan</td><td>90</td><td>78</td><td>35</td><td>80</td><td>90</td>
+          </tr>
+          <tr>
+            <td>2</td><td>Nathiya</td><td>50</td><td>45</td><td>30</td><td>80</td><td>100</td>
+          </tr>
+          <tr>
+            <td>3</td><td>Annapoorani</td><td>40</td><td>50</td><td>60</td><td>90</td><td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      copyright @ 2026 vtnf.com
+    </footer>
+  </div>
+</body>
+</html>

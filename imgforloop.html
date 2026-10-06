@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .con{
+            background-color: orange;
+            width:1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: red;
+            width: 250px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .img {
+            width: 100%;
+            height: 75%;
+            background-color: yellow;
+        }
+
+        .content {
+            width: 100%;
+            height: 25%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javasript</h1>
+    <div class="con" id="con">
+                
+    </div>
+    <script>
+        let final = ''
+        for (let i = 0; i < 20; ++i) {
+            text = `
+            <div class="card">
+                <div class="img">
+                    <img src="./monkey d luffy.jpg" alt="" style="width:100%;height: 100%;">
+                </div>
+                <div class="content">Dummay name</div>
+          </div>
+              ` ;
+
+            final += text;
+
+        }
+        document.getElementById("con").innerHTML = final;
+
+
+    </script>
+
+</body>
+
+</html>

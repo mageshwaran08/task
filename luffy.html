@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Luffy</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        nav {
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(51, 51, 51);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+        .logo {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 400;
+            margin-left: 40px;
+            color: white;
+        }
+        .ul {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 700px;
+            height: 100%;
+        }
+        .li {
+            margin-left: 20px;
+            list-style-type: none;
+            padding: 5px 15px;
+        }
+        .link {
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+            position: relative;
+        }
+        .link::before {
+            content: "";
+            background-color: whitesmoke;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -10px;
+            width: 0%;
+            transition: all 1S linear 0s;
+        }
+        .link:hover::before {
+            width: 100%;
+        }
+        span {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #img {
+            width: 40px;
+            height: 40px;
+        }
+        @media screen and (max-width:640px) {
+            nav {
+                position: relative;
+            }
+            .ul {
+                position: absolute;
+                top: 10vh;
+                width: 100%;
+                display: block;
+                height: auto;
+                background-color: grey;
+                left: -100%;
+                transition: all 0.5s linear 0s;
+            }
+            .li {
+                text-align: left;
+            }
+            span {
+                display: flex;
+                color: whitesmoke;
+                font-size: 32px;
+            }
+            .logo {
+                width: 150px;
+                margin-left: 30px;
+                justify-content: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            ONE PIECE
+        </div>
+        <ul class="ul" id="ul">
+            <li class="li"><a href="" class="link">Home</a></li>
+            <li class="li"><a href="" class="link">About</a></li>
+            <li class="li"><a href="" class="link">Character</a></li>
+            <li class="li"><a href="" class="link">powers</a></li>
+        </ul>
+        <span><i class="fa-solid fa-bars" onclick="toggle()"></i></span>
+    </nav>
+    <style>
+        .main{
+            background-color: rgb(0, 255, 128);
+            width:80%;
+            height:70vh;
+            margin:auto;
+            display: flex;
+            padding:20px;
+        }
+        article{
+            background-color: rgb(255, 38, 0);
+            width:50%;
+            height:100%;
+            font-size:20px;
+            padding:30px;
+            border-right: 2px solid rgb(1, 1, 12);
+            text-shadow: 0px 0px 1px rgb(73, 9, 250);
+        }
+        section{
+            width:50%;
+            height:100%;
+            background-color: rgb(5, 105, 236);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #Monkey.D.Luffy{
+            width:300px;
+            height:450px;
+            box-shadow: 2px -2px 5px 2px rgb(66, 145, 197);
+        }
+
+        @media screen and (max-width:1024px){
+            .main{
+                height:auto;
+                background-color: rgb(0, 68, 255);
+                display: block;
+
+            }
+            article{
+                width:100%;
+                
+            }
+            section{
+                width:100%;
+                margin-top: 20px;
+            }
+            
+        }
+        @media screen and (max-width:620px){
+            .main{
+                width:100%;
+            }
+        }
+    </style>
+
+    <main class = "main">
+        <article>
+           Monkey D. Luffy is the main hero of the Monkey D. Luffy story. He is a cheerful and brave pirate captain. He wants to find the ultimate treasure and become the Pirate King. As a child, he accidentally ate a magical fruit. This fruit turned his body into rubber. He can now stretch his arms and legs. However, he can never swim again. He sails the seas with his loyal crew, the Straw Hat Pirates. He makes strong friends and fights evil foes to protect his ultimate freedom.If you'd like, let me know if you want to learn more about his crew, his Devil Fruit powers, or his bounty.    
+        </article>
+        <section>
+           <img src="./images.webp" alt="" id = "Monkey.D.Luffy">
+        </section>
+    </main>
+    <script>
+        let toggled = false;
+
+        function toggle() {
+            if (!toggled) {
+                toggled = true;
+                document.getElementById("ul").style.left = "0%";
+                return
+            }
+            if (toggled) {
+                toggled = false;
+                document.getElementById("ul").style.left = "-100%";
+                return
+            }
+        }
+    </script>
+</body>
+
+</html>

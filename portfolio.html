@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mageshwaran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1c2b47;
+            color: rgb(250, 248, 248);
+        }
+        .nav-menu {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          list-style: none;
+          }
+        .nav-menu a {
+         color: rgb(252, 253, 252);
+         text-decoration: none;
+         font-size: 20px;
+          }
+        .navbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10%;
+            background-color: #1d1f2b;
+            position: fixed;
+                    
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(247, 244, 244);
+        }
+        
+        .portfolio {
+            width: 100%;
+            min-height: 100vh;
+            padding: 70px 12%;
+            padding-top: 120px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 200px;
+            height: 400px;
+        }
+        .intro h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+        .intro p {
+            color: #8ba1b8;
+            font-size: 16px;
+        }
+        .profile-image{
+            width: 350px;
+            height: 450px;
+            overflow: hidden;
+            border: 15px;
+        }
+        .profile-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position:center;
+            display: block;
+        }
+        section {
+            margin-bottom: 65px;
+        }
+        section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .about p {
+            max-width: 800px;
+            line-height: 1.8;
+            color: #8fa5bb;
+            font-size: 15px;
+        }
+        .education {
+            max-width: 800px;
+        }
+        .education-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .education-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #182c43;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .education-box h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .education-box p {
+            color: #8fa5bb;
+            font-size: 14px;
+        }
+         .skills {
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #4080c9;
+            color: #d3dfeb;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        .Contact{
+            background: #4080c9;
+            max-width: 350px;
+            height: 60px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+    
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+        <div class="logo">
+        Mageshwaran
+        </div>
+        <ul class="nav-menu">
+           <li><a href="#Home" >Home</a></li>
+            <li><a href="#about" >About </a></li>
+            <li><a href="#education" > Education</a></li>
+            <li><a href="#Objective" >Objectives</a></li>
+            <li><a href="#Contact" >Contact</a></li>
+            </ul>
+            </nav>
+    <div class="portfolio">
+        <section id="Home">
+        <header class="header">
+            <div class="intro">
+                <h1>Hi, I'm MAGESHWARAN</h1>
+                <p> Bachelor of Computer Applications </p>
+            </div>
+            <div class="profile-image">
+                <img src="./monkey d luffy.jpg" alt="me">
+            </div>
+        </header>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                I am a Computer Applications student with a strong interest
+                in computers and technology. I have completed my Bachelor of
+                Computer Applications and developed basic knowledge of web
+                development, computer applications and office tools. I enjoy
+                learning new technologies, improving my technical skills and
+                creating simple and user-friendly applications. I am a
+                hardworking and motivated fresher looking for an opportunity
+                to start my professional career.
+            </p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education">
+                <div class="education-box">
+                    <div class="education-icon">
+                        🎓
+                    </div>
+                    <div>
+                        <h3>Bachelor of Computer Applications</h3>
+                        <p>NPR Arts And Science College • 2023 – 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section >
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">MS Word</div>
+                <div class="skill">MS PowerPoint</div>
+                <div class="skill">MS Excel</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Computer Fundamentals</div>
+                <div class="skill">Problem Solving</div>
+            </div>
+        </section>
+         <section id="Objective">
+            <h2>Career Objective</h2>
+            <p>
+                To obtain an entry-level position in a reputed organization
+                where I can use my computer knowledge and communication skills,
+                learn new technologies and contribute to the growth of the
+                organization while developing my professional skills.
+            </p>
+        </section>
+         <section id="Contact">
+            <h2>Personal Details</h2>
+            <div class="Contact">
+            <p>Email:mageshwaranmurugesan08@gmail.com</p>
+            <p>Languages:Tamil,English</p>
+            <p>Nationality:Indian</p>
+            </div>
+    </div>
+</body>
+</html>

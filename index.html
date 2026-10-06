@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result </title>
+    <style>
+
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Result </h2>
+           <form id="form">
+            <label for="name">Student Name</label>
+            <input type="text" id="name"><br></br>
+             <label for="sid">Student ID</label>      
+            <input type="text" id="sid"><br></br>
+              <label for="email">Email</label>     
+            <input type="text" id="email" ><br></br>
+             <label for="dept">Department</label>      
+            <select id="dept">
+                <option>Select Department</option>
+                <option>Java Full Stack</option>
+                <option>Python Full Stack</option>
+                <option>MERN Stack</option>
+                <option>Data Analytics</option>
+            </select><br></br>
+            <label for="mark">Mark</label>
+            <input type="number" id="mark">
+            <br><br>
+            <button type="button" onclick="result()">
+                Submit
+            </button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        function result() {
+            let name = document.getElementById("name").value;
+            let sid = document.getElementById("sid").value;
+            let email = document.getElementById("email").value;
+            let dept = document.getElementById("dept").value;
+            let mark = Number(document.getElementById("mark").value);
+            name = name.trim();
+            sid = sid.trim().toUpperCase();
+            let validID = sid.startsWith("STU") && sid.length == 6;
+            email = email.trim();
+            let validEmail = email.includes("@") && email.includes(".")
+                         && email !== "";
+            if (name == "" || sid == "" || email == ""
+                || dept == "" || document.getElementById("mark").value == "") {
+                document.getElementById("result").innerHTML =
+                    "<h3> fill all the fields</h3>";
+                return;
+            }
+            if (!validID) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Student ID. It must start with STU and contain 6 characters.";
+                return;
+            }
+            if (!validEmail) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Email";
+                return;
+            }
+            if (mark < 0 || mark > 100) {
+                document.getElementById("result").innerHTML =
+                    "Invalid Mark";
+                return;
+            }
+            let grade;
+            if (mark >= 90) {
+                grade = "A+";
+            }
+            else if (mark >= 80) {
+                grade = "A";
+            }
+            else if (mark >= 70) {
+                grade = "B";
+            }
+            else if (mark >= 60) {
+                grade = "C";
+            }
+            else if (mark >= 50) {
+                grade = "D";
+            }
+            else {
+                grade = "F";
+            }
+            let status;
+            if (mark >= 50) {
+                status = "PASS";
+            }
+            else {
+                status = "FAIL";
+            }
+            let eligibility;
+            if (mark >= 60 && validEmail && validID) {
+                eligibility = "Eligible for Next Level";
+            }
+            else {
+                eligibility = "Not Eligible";
+            }
+            let message;
+            switch (dept) {
+                case "Java Full Stack":
+                    message = "Recommended: Advanced Java & Spring Boot";
+                    break;
+                case "Python Full Stack":
+                    message = "Recommended: Django & REST API";
+                    break;
+                case "MERN Stack":
+                    message = "Recommended: React & Node.js";
+                    break;
+                case "Data Analytics":
+                    message = "Recommended: Python & Data Visualization";
+                    break;
+                default:
+                    message = "No recommendation available";
+            }
+            let performance = mark >= 80
+                ? "Excellent"
+                : mark >= 60
+                ? "Good"
+                : "Needs Improvement";
+            document.getElementById("result").innerHTML =
+                "<h2>STUDENT RESULT</h2>" +
+                "<b>Name:</b> " + name + "<br><br>" +
+                "<b>Student ID:</b> " + sid + "<br><br>" +
+                "<b>Email:</b> " + email + "<br><br>" +
+                "<b>Department:</b> " + dept + "<br><br>" +
+                "<b>Mark:</b> " + mark + "<br><br>" +
+                "<b>Grade:</b> " + grade + "<br><br>" +
+                "<b>Result:</b> " + status + "<br><br>" +
+                "<b>Performance:</b> " + performance + "<br><br>" +
+                "<b>Eligibility:</b> " + eligibility + "<br><br>" +
+                "<b>Department Message:</b> " + message;
+        }
+    </script>
+</body>
+</html>
