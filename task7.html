@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance & Payroll Analytics</title>
+</head>
+<body>
+    <h2>JavaScript</h2>
+<script>
+const employees = [
+    { id: 101, name: "Arun", department: "IT", salary: 75000, performance: 92, experience: 6, active: true, skills: ["JavaScript", "React"] },
+    { id: 102, name: "Priya", department: "HR", salary: 48000, performance: 85, experience: 4, active: true, skills: ["Excel", "Recruitment"] },
+    { id: 103, name: "Karthik", department: "IT", salary: 95000, performance: 96, experience: 8, active: true, skills: ["Java", "Spring"] },
+    { id: 104, name: "Divya", department: "Finance", salary: 65000, performance: 78, experience: 5, active: true, skills: ["Excel", "SQL"] },
+    { id: 105, name: "Vijay", department: "IT", salary: 55000, performance: 68, experience: 2, active: true, skills: ["JavaScript", "HTML"] },
+    { id: 106, name: "Meena", department: "Finance", salary: 82000, performance: 91, experience: 7, active: true, skills: ["SQL", "Python"] },
+    { id: 107, name: "Suresh", department: "HR", salary: 42000, performance: 62, experience: 3, active: false, skills: ["Recruitment"] },
+    { id: 108, name: "Nithya", department: "IT", salary: 88000, performance: 89, experience: 5, active: true, skills: ["React", "Node.js"] },
+    { id: 109, name: "Praveen", department: "Sales", salary: 60000, performance: 75, experience: 4, active: true, skills: ["Communication", "CRM"] },
+    { id: 110, name: "Lakshmi", department: "Sales", salary: 72000, performance: 94, experience: 6, active: true, skills: ["CRM", "Analytics"] },
+    { id: 111, name: "Manoj", department: "Finance", salary: 50000, performance: 55, experience: 1, active: false, skills: ["Excel"] },
+    { id: 112, name: "Anitha", department: "IT", salary: 105000, performance: 98, experience: 10, active: true, skills: ["Java", "AWS", "SQL"] }
+];
+
+////////// PART A ////////////
+let FId108 = employees.find((val, ind, arr) => val.id == 108)
+let highestsal = employees.map((val, ind, arr) => val.salary).sort((a, b) => b - a)[0]
+let highest_emp = employees.find((val, ind, arr) => val.salary == highestsal)
+let aws_skill = employees.filter((val, ind, arr) => val.skills.includes("AWS"))
+let React_Pos = employees.filter((val, ind, arr) => val.skills.includes("React")).map(val => val.skills.indexOf("React"))
+let emp_per_below = employees.some((val, ind, arr) => val.performance < 60)
+let active_per_at_70 = employees.filter(val => val.active == true).every(val => val.performance >= 70)
+
+console.log( FId108)
+console.log( highest_emp)
+console.log( aws_skill)
+console.log( React_Pos)
+console.log( emp_per_below)
+console.log( active_per_at_70)
+
+/////////// PART B ////////////
+let active_emp = employees.filter(val => val.active == true)
+let it_dep = employees.filter(val => val.department == "IT")
+let sal_above_70 = employees.filter((val, ind, arr) => val.salary > 70000)
+let per_above_90 = employees.filter(val => val.performance >= 90)
+let sal_desc = [...employees].sort((a, b) => b.salary - a.salary)
+let top_three = [...employees].sort((a, b) => b.salary - a.salary).filter((val, ind) => ind < 3)
+let exp_asc = [...employees].sort((a, b) => a.experience - b.experience)
+let senior_perf = employees.filter(val => val.active == true && val.experience >= 5 && val.performance > 85)
+
+console.log( active_emp)
+console.log(it_dep)
+console.log( sal_above_70)
+console.log( per_above_90)
+console.log( sal_desc)
+console.log( top_three)
+console.log( exp_asc)
+console.log( senior_perf)
+
+//// PART C ////////////
+let total_sal = employees.reduce((acc, val) => acc + val.salary, 0)
+let active_sal = active_emp.reduce((acc, val) => acc + val.salary, 0)
+let avg_sal = total_sal / employees.length
+let it_sal = it_dep.reduce((acc, val) => acc + val.salary, 0)
+let per_90_count = per_above_90.length
+let annual_active = active_sal * 12
+let bonus_10 = active_emp.map(val => ({ name: val.name, salary: val.salary, bonus: val.salary * 0.1 }))
+let total_bonus = bonus_10.reduce((acc, val) => acc + val.bonus, 0)
+
+console.log(total_sal)
+console.log( active_sal)
+console.log( avg_sal)
+console.log( it_sal)
+console.log( per_90_count)
+console.log( annual_active)
+console.log( bonus_10)
+console.log( total_bonus)
+/////PART-D/////////
+let basic_report = employees.map(val => ({ name: val.name, department: val.department, salary: val.salary, performance: val.performance }))
+let status_report = employees.map(val => {
+    return {
+        ...val,
+        performanceStatus: val.performance >= 90 ? "Excellent" : val.performance >= 75 ? "Good" : val.performance >= 60 ? "Average" : "Needs Improvement"
+    }
+})
+let bonus_report = employees.map(val => ({ name: val.name, salary: val.salary, bonus: val.salary * 0.1, finalSalary: val.salary + val.salary * 0.1 }))
+let upper_names = employees.map(val => val.name.toUpperCase())
+let active_sorted = employees.filter(val => val.active).sort((a, b) => b.salary - a.salary).map(val => ({ name: val.name, salary: val.salary }))
+
+console.table(basic_report)
+console.table(status_report)
+console.table(bonus_report)
+console.log( upper_names)
+console.table(active_sorted)
+
+</script>
+</body>
+</html>
